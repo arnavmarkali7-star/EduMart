@@ -1,0 +1,39 @@
+{
+  "name": "edumart",
+  "version": "1.0.0",
+  "description": "EduMart - College Students Second Hand Product Exchange Platform",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm start",
+    "install-server": "npm install",
+    "install-client": "cd client && npm install",
+    "install-all": "npm install && cd client && npm install"
+  },
+  "keywords": [
+    "edumart",
+    "second-hand",
+    "college",
+    "exchange"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "multer": "^1.4.5-lts.1",
+    "socket.io": "^4.6.1",
+    "nodemailer": "^6.9.7",
+    "express-validator": "^7.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.1"
+  }
+}
+

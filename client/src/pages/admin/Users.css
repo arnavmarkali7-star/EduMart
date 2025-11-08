@@ -1,0 +1,82 @@
+.admin-users {
+  min-height: calc(100vh - 200px);
+  padding: 2rem;
+  background: #f5f5f5;
+}
+
+.admin-users h1 {
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.users-table {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #f5f5f5;
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  font-weight: bold;
+  color: #333;
+}
+
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.status.active {
+  background: #4CAF50;
+  color: white;
+}
+
+.status.inactive {
+  background: #f44336;
+  color: white;
+}
+
+.btn-activate,
+.btn-deactivate {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-activate {
+  background: #4CAF50;
+  color: white;
+}
+
+.btn-deactivate {
+  background: #f44336;
+  color: white;
+}
+
+.loading {
+  text-align: center;
+  padding: 4rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
