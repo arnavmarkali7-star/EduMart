@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/EduMart/static/css/main.a32e0b8c.css",
+    "main.js": "/EduMart/static/js/main.4ff968db.js",
+    "index.html": "/EduMart/index.html",
+    "main.a32e0b8c.css.map": "/EduMart/static/css/main.a32e0b8c.css.map",
+    "main.4ff968db.js.map": "/EduMart/static/js/main.4ff968db.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a32e0b8c.css",
+    "static/js/main.4ff968db.js"
+  ]
+}
