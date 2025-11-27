@@ -1,7 +1,8 @@
 [build]
-  command = "cd client && npm run build"
+  command = "npm run install-all && cd client && npm run build"
   publish = "client/build"
   base = "."
+  functions = "netlify/functions"
 
 [dev]
   command = "npm run dev"
@@ -12,21 +13,29 @@
   to = "/index.html"
   status = 200
 
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api:splat"
+  status = 200
+
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
     X-XSS-Protection = "1; mode=block"
+    Access-Control-Allow-Origin = "*"
 
 [context.production]
-  command = "cd client && npm run build"
+  command = "npm run install-all && cd client && npm run build"
   publish = "client/build"
+  environment = { NODE_ENV = "production" }
 
 [context.deploy-preview]
-  command = "cd client && npm run build"
+  command = "npm run install-all && cd client && npm run build"
   publish = "client/build"
 
 [context.branch-deploy]
-  command = "cd client && npm run build"
+  command = "npm run install-all && cd client && npm run build"
   publish = "client/build"
+
