@@ -74,12 +74,20 @@ Once connected, every push to `main` branch will:
 
 ---
 
-## Backend Integration
+## Backend & MongoDB Setup
 
-For your full-stack app:
+Your app uses **MongoDB Atlas** with this connection string:
+```
+mongodb+srv://<db_username>:<db_password>@cluster0.ofyt5ma.mongodb.net/edumart?retryWrites=true&w=majority
+```
+
+**Replace `<db_username>` and `<db_password>` with your actual MongoDB credentials.**
+
+### Backend Deployment
 1. **Deploy backend** on Render, Railway, or Heroku (not Netlify)
-2. **Update** `REACT_APP_API_URL` with your backend URL
-3. **Configure CORS** on your backend to allow Netlify domain
+2. **Add MONGODB_URI** to backend environment variables
+3. **Update** `REACT_APP_API_URL` with your backend URL
+4. **Configure CORS** on your backend to allow Netlify domain
 
 ### Backend CORS Setup (Express)
 ```javascript
@@ -89,6 +97,14 @@ app.use(cors({
   origin: ['https://your-site.netlify.app', 'http://localhost:3000'],
   credentials: true
 }));
+```
+
+### Backend Environment Variables (for deployment platform)
+```
+MONGODB_URI=mongodb+srv://<db_username>:<db_password>@cluster0.ofyt5ma.mongodb.net/edumart?retryWrites=true&w=majority
+JWT_SECRET=your_secret_key
+PORT=5000
+NODE_ENV=production
 ```
 
 ---
