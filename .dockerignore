@@ -1,0 +1,14 @@
+node_modules
+npm-debug.log
+build
+dist
+.env
+.git
+.gitignore
+README.md
+.DS_Store
+server/node_modules
+client/node_modules
+uploads
+.netlify
+netlify
